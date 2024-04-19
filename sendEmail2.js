@@ -33,7 +33,15 @@ const mailOptions={
     to:options.to,
     subject:options.subject,
     // text:options.text,
-    html:htmlstring
+    html:htmlstring,
+    attachments:[
+        {
+            filename:"js.pdf",
+            path:"./js.pdf",
+            contentType:"application/pdf"
+        }
+      
+    ]
 }
 
 try{
@@ -52,7 +60,7 @@ catch(error){
 
 object={
     to:"swathi@lyrostech.com",
-    subject:"send important information",
+    subject:"send important Documents",
     // text:"Please find the notes of class note"
     name:"Ramesh",
     otp:"1234"
